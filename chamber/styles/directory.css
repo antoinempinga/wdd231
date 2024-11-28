@@ -47,40 +47,96 @@ section{
 }
 
 /* business cards */
-#business-cards{
-    display:  flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-    
-}
-.card-container{
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    margin: 20px;
-    width: 100%;
-    max-width: 90%;
-    min-width: 300px;
-    display: flex;
-    flex-direction: row;
-    background-color: #fff;
-}
-.card-container img{
-    width: 45px;
-    height: 45px;
-}
-.card-container h6{
-    text-align: left;
-    margin: auto 20px;
-}
-.card-container p{
-    margin: auto;
-    padding: 0 30px;
-    
+header {
+    background: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
+h1 {
+    font-size: 2em;
+}
+
+/* Styling for the business directory container */
+#member-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.member-card {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.member-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.member-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.member-description {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.member-address,
+.member-phone {
+    font-size: 1em;
+    color: #333;
+}
+
+.member-website {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #2980B9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.member-website:hover {
+    background-color: #3498DB;
+}
+
+/* Buttons for grid/list view toggle */
+#view-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#view-toggle button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #2980B9;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#view-toggle button:hover {
+    background-color: #3498DB;
+}
+
+/* Media Query for List View */
+@media screen and (max-width: 768px) {
+    #member-container {
+        grid-template-columns: 1fr;
+    }
+}
 @media only screen and (max-width:1000px){
     .hero-btn{
         position: absolute;
