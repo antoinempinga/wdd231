@@ -8,7 +8,7 @@ async function getBusiness(){
 //  business data for Chamber Directory
 const businesses = [
     {
-        name: "Design",
+        name: "Ampikalgede Design",
         description: "Creative design services including graphic design, branding, and visual communication.",
         category: "Design",
         address: "123 Creative St Lazar, Kajiba, Mbuji Mayi",
@@ -22,24 +22,48 @@ const businesses = [
         address: "456 Ngandajika, Lomami",
         phone: "+243 830-526-352",
         website: "https://nkambakabeya.github.io/techmindset.github.io/techmindset.html/",
-        image: "techsolution.jpg",
     },
     {
-        name: "IT Solution",
+        name: "Mapasa IT Solution",
         description: "End-to-end IT solutions for businesses, from setup to maintenance and network management.",
         category: "IT Solution",
         address: "789 IT Blvd, Digital congo, Masanka, Mbuji Mayi",
         phone: "+243 830-526-352",
-        website: "https://www.itsolutions.com",
+        website: "https://nkambakabeya.github.io/techmindset.github.io/techmindset.html",
     },
     {
-        name: "UIX Design",
-        description: "Specializing in user interface and user experience design to create seamless digital experiences.",
-        category: "UIX Design",
-        address: "101 UX St, Web City",
-        phone: "+243-974-526-632",
+        name: "Global Trade",
+        description: "International trade solutions, import/export services, and logistics management",
+        category: "Trade Logistcis",
+        address: "88 Trade Park, Lubumbashi",
+        phone: "+243 812-654-98",
+        website: "https://nkambakabeya.github.io/techmindset.github.io/techmindset.html",
+    },
+    {
+        name: "Eco Ventures",
+        description: "Sustainable business solutions focused on environmental conservation and green technologies.",
+        category: "Sustainability",
+        address: "55 Green Ave, Goma",
+        phone: "+243 896-456-123",
+        website: "https://antoinempinga.github.io/ampikalgededesign/index.htmls"
+       },
+    {
+        name: "Creative Lab",
+        description: "Innovative solutions for digital marketing, brand strategy, and interactive media.",
+        category: "Media marketing",
+        address: "200 Media Rd, Kinshasa",
+        phone: "+243 800-123-456",
         website: "https://antoinempinga.github.io/ampikalgededesign/index.html",
     },
+    {
+        name: "HealthCare Pro",
+        description: "Specializing in user interface and user experience design to create seamless digital experiences.",
+        category: "Health",
+        address: "101 Health St, Kisangani",
+        phone: "+243 821-975-463",
+        website: "https://antoinempinga.github.io/ampikalgededesign/index.html",
+    },
+    
     // You can add more businesses here...
 ];
 
