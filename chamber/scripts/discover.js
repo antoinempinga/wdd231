@@ -1,118 +1,92 @@
-async function displayList(){
-    let responce = await fetch("./data/members.json");
-    let data = await responce.json();
-    // console.log(data.companies);
-    printlist(data.companies)
+// Menu Toggle for Mobile
+document.getElementById('myButton').addEventListener('click', function() {
+    const menuLinks = document.querySelector('.menuLinks');
+    menuLinks.classList.toggle('active');
+});
+
+// To close the menu when clicking outside (optional)
+document.addEventListener('click', function(event) {
+    const menuLinks = document.querySelector('.menuLinks');
+    if (!menuLinks.contains(event.target) && !event.target.matches('#myButton')) {
+        menuLinks.classList.remove('active');
+    }
+});
+
+// Lazy Load Companies
+const companies = [
+    { name: 'Ampikalgede Design'},
+    { name: 'Tech Mindset'},
+    { name: 'Mapasa IT Solution'},
+    { name: 'Global Trade'},
+    { name: 'Creative Lab'},
+    { name: 'Eco Ventures'},
+];
+
+const companiesOnBoard = document.getElementById('companiesOnBoard');
+
+// Populate Companies
+companies.forEach(company => {
+    const companyDiv = document.createElement('div');
+    companyDiv.classList.add('company');
+    companyDiv.innerHTML = `
+        <p>${company.name}</p>
+    `;
+    companiesOnBoard.appendChild(companyDiv);
+});
+
+// Last Visit Functionality
+const visitMessageElement = document.getElementById("visit-message");
+
+const lastVisitDate = localStorage.getItem("lastVisit");
+
+if (lastVisitDate) {
+    const lastVisitTime = new Date(parseInt(lastVisitDate));
+    const currentTime = new Date();
+    const timeDiff = Math.floor((currentTime - lastVisitTime) / (1000 * 60 * 60 * 24)); // Days difference
+
+    if (timeDiff < 1) {
+        visitMessageElement.textContent = "Back so soon! Awesome!";
+    } else if (timeDiff === 1) {
+        visitMessageElement.textContent = `You last visited 1 day ago.`;
+    } else {
+        visitMessageElement.textContent = `You last visited ${timeDiff} days ago.`;
+    }
 }
-const peopleDiv= document.querySelector("#companiesOnBoard");
-const printlist = (d) =>{
-    console.log(d);
-    d.forEach(element => {
-       let ul = document.createElement("ul");
-       let li = document.createElement("li");
 
-       li.innerHTML = `${element.name}`
-       ul.appendChild(li);
-       peopleDiv.appendChild(ul)
-    });
-  
-}
+// Save current visit time to localStorage
+localStorage.setItem("lastVisit", Date.now().toString());
 
-displayList();
-
+// Calendar Population
+const daysElement = document.getElementById('days');
 const monthYearElement = document.getElementById('month-year');
-    const daysElement = document.getElementById('days');
-    const prevMonthButton = document.getElementById('prev-month');
-    const nextMonthButton = document.getElementById('next-month');
+const prevMonthButton = document.getElementById('prev-month');
+const nextMonthButton = document.getElementById('next-month');
 
-    let currentDate = new Date();
+// Generate Calendar for the current month
+function generateCalendar(monthOffset = 0) {
+    const currentDate = new Date();
+    currentDate.setMonth(currentDate.getMonth() + monthOffset);
+    const month = currentDate.getMonth();
+    const year = currentDate.getFullYear();
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
 
-    function renderCalendar() {
-        // Clear previous calendar
-        daysElement.innerHTML = '';
+    monthYearElement.textContent = `${firstDay.toLocaleString('default', { month: 'long' })} ${year}`;
 
-        // Set month and year in header
-        const options = { month: 'long', year: 'numeric' };
-        monthYearElement.textContent = currentDate.toLocaleDateString('en-US', options);
+    // Clear previous days
+    daysElement.innerHTML = '';
 
-        // Get first and last day of the month
-        const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
-        const lastDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
-
-        // Populate days
-        for (let i = 0; i < firstDay; i++) {
-            daysElement.innerHTML += `<div></div>`; // Blank spaces before first day
-        }
-        for (let i = 1; i <= lastDate; i++) {
-            const dayElement = document.createElement('div');
-            dayElement.textContent = i;
-            if (i === new Date().getDate() && 
-                currentDate.getMonth() === new Date().getMonth() && 
-                currentDate.getFullYear() === new Date().getFullYear()) {
-                dayElement.classList.add('today'); // Highlight current day
-            }
-            daysElement.appendChild(dayElement);
-        }
+    // Fill in the calendar days
+    for (let i = 1; i <= lastDay.getDate(); i++) {
+        const dayElement = document.createElement('div');
+        dayElement.textContent = i;
+        daysElement.appendChild(dayElement);
     }
-
-    // Previous and next month navigation
-    prevMonthButton.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-    });
-
-    nextMonthButton.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
-
-    // Initial render
-    renderCalendar();
-
-const cardDiscover = document.querySelector("#main");
-async function getPics(){
-    const response = await fetch('./data/form.json');
-    const data = await response.json();
-    console.log(data)
-    cardsPics(data.images);
-    
 }
 
-const cardsPics = (d) =>{
-    console.log(d);
-    d.forEach(element => {
+// Initial calendar load
+generateCalendar();
 
-        let cardImage = document.createElement("img");
-        cardImage.classList.add("busPic")
-        cardImage.loading = "lazy";
-        cardImage.src = `${element.image}`;
-
-        cardDiscover.appendChild(cardImage);
-
-    });
-
-};
-
-getPics();
-
-const now = new Date();
-const lastVisit = localStorage.getItem('lastVisit');
-let message='';
-if(lastVisit){
-    const lastVisitDate = new Date(lastVisit);
-    const timeDifference = now - lastVisitDate;
-    const dayDifference = Math.floor(timeDifference/(1000 * 60 * 60 * 24));
-
-    if(dayDifference < 1){
-        message= "welcome back! You visited earlier today."
-    } else if(dayDifference === 1){
-        message = "Welcome back! You last visited yesterday.";
-    } else{
-        message = `Welcome back! It's been ${daysDifference} days since your last visit.`
-    }
-} else {
-    message = "Welcome to your first visit!";
-}
-
-document.getElementById('visit-message').textContent = message;
-
+// Calendar navigation
+prevMonthButton.addEventListener('click', () => generateCalendar(-1));
+nextMonthButton.addEventListener('click', () => generateCalendar(1));

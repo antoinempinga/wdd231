@@ -2,28 +2,27 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        
-        <!-- SEO Meta Tags -->
-        <title>Bolivia Business Hub - Empowering Bolivian Startups and Entrepreneurs</title>
-        <meta name="description" content="Bolivia Business Hub is a platform providing resources, networking, and guidance to Bolivian startups and entrepreneurs, helping them grow and thrive in the digital economy.">
-        <meta name="author" content="Samuel F. Mercado Perez">
-        
-        <!-- Social Media / Open Graph Meta Tags -->
-        <meta property="og:title" content="Bolivia Business Hub - Empowering Bolivian Startups">
-        <meta property="og:description" content="Discover resources, events, and networking opportunities to boost your startup or business in Bolivia.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://sam-mercado.github.io/wdd231/chamber/directory.html">
-        <meta property="og:image" content="images/peta.jpg">
-        <!--typography-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-        <!-- Favicon -->
-        <link rel="icon" href="images/book-svgrepo-com.svg" type="image/icon">    
+    <!-- SEO Meta Tags -->
+    <title>Ampikalgede Business</title>
+    <meta name="description" content="Ampikalgede Business is a platform that provides resources, networking opportunities, and expert guidance to Bolivian startups and entrepreneurs. It is designed to support and empower businesses as they navigate and grow within the digital economy, offering tools for development and expansion to help them thrive in today's competitive market.">
+    <meta name="author" content="Antoine Mpinga Kalambayi">
     
+    <!-- Social Media / Open Graph Meta Tags -->
+    <meta property="og:title" content="Ampiklagede Business AB">
+    <meta property="og:description" content="Discover resources, events, and networking opportunities to accelerate your startup or business in Mbuji Mayi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/antoinempinga/wdd231/blob/main/chamber/index.html">
+    <meta property="og:image" content="images/peta.jpg">
+    <!--typography-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/icon">      
         <link rel="stylesheet" href="styles/components.css">
         <link rel="stylesheet" href="styles/home.css">
         <script src="scripts/components.js" defer></script>
@@ -31,17 +30,18 @@
        
         
     </head>
+    
     <body>
         <header>
-            <img id="logo" src="images/logobbh.png" alt="logo bbh" loading="lazy">
+            <img id="logo" src="images/logo.png" alt="logo bbh" loading="lazy">
             <nav>
                 <button id="myButton">&#9776;</button>
                 <ul class="menuLinks">
-                    <li><a href="index.html" title="home">home</a></li>
-                    <li><a href="directory.html" title="business">directory</a></li>
-                    <li><a href="join.html" title="join">join</a></li>
-                    <li><a href="#" title="about">about</a></li>
-                    <li><a href="discover.html" title="discover">discover</a></li>
+                    <li><a href="index.html" title="home">HOME</a></li>
+                    <li><a href="directory.html" title="business">DIRECTORY</a></li>
+                    <li><a href="join.html" title="join">JOIN</a></li>
+                    <li><a href="#" title="about">ABOUT</a></li>
+                    <li><a href="discover.html" title="discover">DISCOVER</a></li>
                 </ul>
             </nav>
         </header>
@@ -50,16 +50,23 @@
             <section id="sidebar">
                 <h6>Companies we work with</h6>
                 <h5>Welcome Back!</h5>
+                
+           
                 <p id="visit-message"></p>
+                
                 
                 <div id="companiesOnBoard">
 
                 </div>
                 <div class="calendar-section">
                     <div class="calendar-header">
-                        <button id="prev-month">&#9664;</button>
+                        <button id="prev-month">
+                            <i class="fas fa-calendar-day"></i> <!-- FontAwesome Calendar Icon -->
+                        </button>
                         <span id="month-year"></span>
-                        <button id="next-month">&#9654;</button>
+                        <button id="next-month">
+                            <i class="fas fa-calendar-day"></i> <!-- FontAwesome Calendar Icon -->
+                        </button>
                     </div>
                     <div class="calendar">
                         <!-- Day names -->
@@ -71,20 +78,28 @@
                         <div class="days" id="days"></div>
                     </div>
                 </div>
+                
             </section>
 
             <section id="main" >
-                
+                <div class="image-gallery">
+                    <img src="images/peta.jpg" alt="Map" class="main-image">
+                    <img src="images/bakery.jpg" alt="Company 4" class="main-image">
+                    <img src="images/engine.jpg" alt="Company 5" class="main-image">
+                    <img src="images/flayer.png" alt="Company 6" class="main-image">
+                </div>
             </section>
+            </section>
+            
         </main>
     </body>
     <footer>
         <div>
-            <img id="logo2" src="images/logobbh.png" alt="logo bbh">
-            <p>Calle Falsa #456,Zona Central</p>
-            <p>La Paz, Bolivia</p>
-            <p>office@bbhub.com</p>
-            <p>+591 64843357</p>
+            <img id="logo2" src="images/logo.png" alt="logo AB">
+            <p>DRC, Kasaï Oriental</p>
+            <p>MbujiMayi</p>
+            <p>ampikalgede.office@ampikalgedebusiness.org</p>
+            <p>+243 843-383-352</p>
         </div>
         <div>
             <p>WDD231 Class Project</p>
@@ -93,8 +108,9 @@
             <div class="social">
                 <a href="#"><img class="icon" src="images/facebook-svgrepo-com.svg" alt="facebook"></a>
                 <a href="#"><img class="icon" src="images/instagram-svgrepo-com.svg" alt="instagram"></a>
-                <a href="#"><img class="icon" src="images/linkedin-svgrepo-com.svg" alt="linkedin"></a>   
+                <a href="https://www.linkedin.com/in/antoine-mpinga-kalambayi-815345195/" target="_blank"><img class="icon" src="images/linkedin-svgrepo-com.svg" alt="linkedin"></a>   
             </div>
         </div>
     </footer>
+</body>
 </html>
