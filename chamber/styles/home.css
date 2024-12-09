@@ -278,19 +278,3 @@ h2 {
 .main-image:hover {
     transform: scale(1.05); /* Scale image slightly on hover */
 }
-/* For mobile, stack images in the sidebar and main content */
-@media (max-width: 768px) {
-    .sidebar-image, .main-image {
-        width: 100%; /* Ensure images take up full width */
-    }
-
-    .sidebar-images {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-gallery {
-        grid-template-columns: 1fr; /* Single column on mobile */
-    }
-}
