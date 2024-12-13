@@ -1,41 +1,36 @@
 {
   "products": [
     {
-      "title": "Ingles Basico",
-      "image": "./Images/product1.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "title": "Core Basics English",
+      "image": "./Images/product1.jpg",
+      "description": "Core Basics English is designed to help learners establish a strong foundation in the language, making it easier to progress to more advanced levels of proficiency."
     },
     {
-      "title": "Ingles Intermedio",
-      "image": "./Images/product2.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "title": "Intermediate English proficiency",
+      "image": "./Images/produc2.jpg",
+      "description": "At the Intermediate level, learners are working to refine their skills, expand their vocabulary, and improve fluency in both spoken and written communication."
     },
     {
-      "title": "Mentorias",
+      "title": "Business and Advanced English Proficiency",
       "image": "./Images/product3.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      "description": "In a Business English context, it might focus on structured professional guidance where experienced individuals help others develop specific skills, strategies, or career paths. For Advanced English Proficiency, the term would be used to describe more sophisticated or strategic guidance, often in a leadership or expert capacity."
     }
   ],
   "reviews": [
     {
-      "name": "Juan Pérez",
-      "image": "./Images/JuanPerez.jpg",
-      "description": "Las clases de inglés fueron excelentes. Aprendí mucho en poco tiempo gracias a los profesores y el material didáctico. ¡Muy recomendable!"
+      "name": "Max Gradel",
+      "image": "./Images/gradel.jpg",
+      "description": "I really really loved the way the concepts are explained — everything is broken down in a clear, easy-to-understand way. The practical approach really helped me improve my fluency quickly, and the real-world examples made learning even more relevant. The classes are highly interactive, encouraging participation and making the learning process more engaging and effective. I felt supported throughout, and I can see a noticeable improvement in my skills."
     },
     {
-      "name": "María González",
-      "image": "./Images/MariaGonzales.jpg",
-      "description": "Me encantó la manera en que explican los conceptos. El enfoque práctico me ayudó a mejorar mi fluidez rápidamente. Las clases son muy interactivas."
+      "name": "Edwin Adjeke",
+      "image": "./Images/edwin.jpg",
+      "description": "The course is incredibly comprehensive, covering everything from the basics to more advanced concepts. The instructors are highly skilled, approachable, and provide support every step of the way. They really take the time to ensure you understand the material. I learned much more than I expected, and the hands-on approach made all the difference. The experience truly exceeded my expectations, and I feel much more prepared and confident in my abilities."
     },
     {
-      "name": "Carlos Rodríguez",
-      "image": "./Images/CarlosRodriguez.jpg",
-      "description": "El curso es increíblemente completo. Los profesores están muy bien capacitados y te ayudan en todo momento. Aprendí mucho más de lo que esperaba."
-    },
-    {
-      "name": "Ana López",
-      "image": "./Images/AnaLopez.jpg",
-      "description": "Nunca pensé que aprender inglés podría ser tan fácil y divertido. Las clases son dinámicas y me siento más segura al hablar. ¡Recomendadísimo!"
+      "name": "Brigitte Bardo",
+      "image": "./Images/bardo.jpg",
+      "description": "I never thought learning English could be so easy and fun. The classes are dynamic, engaging, and interactive, making each lesson enjoyable. I feel much more confident speaking now, and my overall skills have improved significantly. The teachers are supportive and always make sure you understand the material. Highly recommended – it’s been an amazing experience that truly exceeded my expectations!"
     }
   ],
   "social": [
@@ -58,50 +53,50 @@
   ],
   "teachers": [
     {
-      "name": "Samuel Mercado",
-      "image": "./Images/samuel.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "name": "Antoine Mpinga Kalambayi",
+      "image": "./Images/ampi.jpg",
+      "description": "Mr. Antoine excels at breaking down complex grammar rules, ensuring every student masters sentence structure and punctuation with clarity and precision."
     },
     {
-      "name": "Lucas Mercado",
-      "image": "./Images/lucas.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "name": "Augustin Nkamba Kabeya",
+      "image": "./Images/ankc.jpg",
+      "description": "Mr. Augustin inspires a deep love for literature, guiding students through thoughtful analysis of novels, poems, and plays, while encouraging critical thinking and discussion."
 
     },
     {
-      "name": "Jamil Alanoca",
-      "image": "./Images/jamil.jpg",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      "name": "Paulin Mpoyi Luanga",
+      "image": "./Images/paul.jpg",
+      "description": "Mr. Paul focuses on honing both writing and speaking skills, helping students communicate confidently and effectively through engaging lessons and practical exercises."
     }
   ],
   "faqs": [
     {
-      "question": "Lorem ipsum dolor sit amet?",
-      "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris."
+      "question": "What is the best way to improve my English speaking skills?",
+      "answer": "The best way to improve English speaking is through regular practice. Engage in conversations with native speakers or fellow learners, use language exchange apps, and focus on pronunciation and fluency. Watching English movies or shows and mimicking their dialogue can also help. Consistent speaking practice builds confidence and reduces hesitation."
     },
     {
-      "question": "Curabitur vulputate euismod nunc?",
-      "answer": "Curabitur vulputate euismod nunc, a cursus leo pretium in. Nulla facilisi. Sed a porttitor felis."
+      "question": "How can I expand my English vocabulary effectively?",
+      "answer": "Expand your vocabulary by reading diverse materials like books, articles, and blogs. Use flashcards, apps like Anki or Quizlet, and learn a few new words daily. Incorporating new words into conversations and writing reinforces retention. Group words by themes, and pay attention to idioms, phrasal verbs, and collocations."
     },
     {
-      "question": "Fusce vehicula dolor arcu?",
-      "answer": "Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus."
+      "question": "What are some strategies for understanding English grammar better?",
+      "answer": "To grasp grammar, start with the basics (e.g., tenses, sentence structures) and build gradually. Use grammar-focused books or apps, practice with worksheets, and analyze example sentences. Focus on real-world usage rather than just rules. Speaking and writing exercises help reinforce grammar in practical contexts."
     },
     {
-      "question": "Vivamus vel sapien laoreet?",
-      "answer": "Vivamus vel sapien laoreet, cursus nisi ac, pretium est. Nullam dapibus nisi vitae tortor dignissim, ut fermentum velit dictum."
+      "question": "How can I improve my English listening comprehension?",
+      "answer": "Improve listening skills by actively engaging with audio materials like podcasts, audiobooks, and news in English. Start with slower-paced content and gradually move to more natural, faster speech. Use subtitles when watching shows or videos initially, then switch them off to challenge yourself. Pay attention to accents, tone, and context."
     },
     {
-      "question": "Praesent ac nibh vestibulum?",
-      "answer": "Praesent ac nibh vestibulum, posuere nulla non, volutpat nunc. Nam feugiat urna non libero blandit, nec posuere nisi porta."
+      "question": "What are the best resources for learning English online?",
+      "answer": "Online resources include apps like Duolingo, Memrise, or Rosetta Stone for structured learning. Websites like BBC Learning English and FluentU offer free lessons and videos. Platforms like YouTube have channels dedicated to English learning. Additionally, online tutors on sites like iTalki and Cambly provide personalized guidance."
     },
     {
-      "question": "Aliquam erat volutpat integer?",
-      "answer": "Aliquam erat volutpat. Integer ut venenatis massa. In dignissim orci sit amet turpis vehicula, id vehicula magna convallis."
+      "question": "How long does it take to become fluent in English?",
+      "answer": "Fluency depends on factors like your starting level, how much time you dedicate daily, and your immersion in the language. With consistent practice, beginners can reach conversational fluency in 6 months to 2 years. Advanced fluency may take longer. Immersive environments and focused practice significantly shorten the timeline."
     },
     {
-      "question": "Sed faucibus odio nec tellus?",
-      "answer": "Sed faucibus odio nec tellus bibendum, id tincidunt dui viverra. Morbi non mi eu purus sodales laoreet sit amet eget sapien."
+      "question": "What are common mistakes English learners should avoid?",
+      "answer": "Common mistakes include overemphasizing grammar rules at the expense of practical usage, not practicing speaking out of fear of mistakes, and translating directly from their native language. Avoid sticking to just one method of learning, like textbooks. Balanced practice across speaking, listening, reading, and writing is key."
     }
   ]
 }

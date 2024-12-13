@@ -63,16 +63,16 @@ function getContat(){
     about.classList.add('aboutCourses');
 
     about.innerHTML=`
-    <h4>Para mas informacion en:</h4>
+    <h4>Scan For more information : </h4>
     <ul > 
-    <li>Cursos de Ingles Basico</li>
-    <li>Cursos de Ingles Intermedio</li>
-    <li>Mentorias</li>
+    <li>Core Basics English</li>
+    <li>Intermediate English proficiency</li>
+    <li>Advanced English Proficiency</li>
     </ul>`
     qrImg.src = './Images/qr.jpg';
 
     // about.style.padding = '50px';
-    qrImg.style.padding = '30px';
+    qrImg.style.padding = '1%';
     
     card.appendChild(qrImg);
     card.appendChild(about);
@@ -80,7 +80,7 @@ function getContat(){
     contactUs.appendChild(card)
 }
 
-addTitle('Nuestro Team', teamContainer);
+addTitle('Our Team', teamContainer);
 getTeam(team);
-addTitle('Contactanos', contactUs)
+addTitle('Contact Us', contactUs)
 getContat();

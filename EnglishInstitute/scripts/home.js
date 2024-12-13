@@ -1,7 +1,6 @@
 const productDiv = document.querySelector('#product');
 
 async function getProduct(){
-    //C:\Users\Samuel Mercado\wdd231\EnglishInstitute\data\cardsInformation.json
     try{
          
         const response = await fetch('./data/cardsInformation.json');
