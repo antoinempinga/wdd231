@@ -84,3 +84,88 @@ addTitle('Our Team', teamContainer);
 getTeam(team);
 addTitle('Contact Us', contactUs)
 getContat();
+
+// booking session
+// Mentor data
+const mentors = [
+    {
+      name: "Antoine Mpinga Kalambayi",
+      image: "./Images/ampi.jpg",
+      description: "Mr. Antoine excels at breaking down complex grammar rules, ensuring every student masters sentence structure and punctuation with clarity and precision."
+    },
+    // Add more mentors here if needed
+  ];
+  
+  // Function to display team members dynamically
+  function displayMentors() {
+    const teamContainer = document.getElementById('team');
+    
+    mentors.forEach(mentor => {
+      // Create mentor card
+      const mentorCard = document.createElement('div');
+      mentorCard.classList.add('team-member-card');
+      
+      // Create image element
+      const mentorImage = document.createElement('img');
+      mentorImage.src = mentor.image;
+      mentorImage.alt = mentor.name;
+      
+      // Create mentor name element
+      const mentorName = document.createElement('h3');
+      mentorName.textContent = mentor.name;
+      
+      // Create mentor description element
+      const mentorDescription = document.createElement('p');
+      mentorDescription.textContent = mentor.description;
+      
+      // Create the "Book Session" button
+      const bookButton = document.createElement('button');
+      bookButton.classList.add('book-btn');
+      bookButton.textContent = 'Book a Session';
+      bookButton.onclick = () => showBookingForm(mentor.name); // Show the booking form for this mentor
+      
+      // Append the elements to the mentor card
+      mentorCard.appendChild(mentorImage);
+      mentorCard.appendChild(mentorName);
+      mentorCard.appendChild(mentorDescription);
+      mentorCard.appendChild(bookButton);
+      
+      // Append the mentor card to the team container
+      teamContainer.appendChild(mentorCard);
+    });
+  }
+  
+  // Show booking form with selected mentor's name
+  function showBookingForm(mentorName) {
+    document.getElementById('mentorName').innerText = mentorName;
+    document.getElementById('bookingFormContainer').classList.remove('hidden');
+  }
+  
+  // Close the booking form
+  function closeBookingForm() {
+    document.getElementById('bookingFormContainer').classList.add('hidden');
+  }
+  
+  // Show payment options based on selected payment method
+  document.querySelectorAll('input[name="paymentMethod"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      const paymentDetails = document.getElementById('paymentDetails');
+      if (this.value === 'Visa Card' || this.value === 'Mobile Money') {
+        paymentDetails.classList.remove('hidden');
+      } else {
+        paymentDetails.classList.add('hidden');
+      }
+    });
+  });
+  
+  // Handle form submission (this could be connected to an actual backend)
+  document.getElementById('bookMentorship').addEventListener('click', function() {
+    alert('Your mentorship session has been booked successfully!');
+    closeBookingForm();
+  });
+  
+  // Call the displayMentors function when the page loads
+  window.onload = function() {
+    displayMentors();
+  };
+  

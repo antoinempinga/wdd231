@@ -121,3 +121,23 @@
         margin-top: 100px;
     }
 }
+.btnn {
+    margin-left: 35%;
+    text-decoration: none;
+    color:black;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 7px;
+    height: 45px;
+    width: 300px;
+    font-weight: 600;
+    transition: 800ms ease;
+    background: rgba(54, 119, 137, 0.635);
+}
+.btnn:hover {
+    text-decoration: none; /* Ensures no underline appears on hover */
+    box-shadow: 2px 2px 10px #13312b88;
+    border: 1px solid var(--color2Dark);
+    transition: 800ms ease;
+    background-color: var(--color3);
+}

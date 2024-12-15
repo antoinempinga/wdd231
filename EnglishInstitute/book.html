@@ -1,0 +1,136 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Booking</title>
+    <link rel="stylesheet" href="styles/uiElements.css">
+    <link rel="stylesheet" href="styles/book.css">
+    <script src="scripts/general.js" defer></script>
+    <script src="scripts/book.js" defer></script>
+    <!-- Favicon -->
+    <link rel="icon" href="images/beplogo.png" type="image/icon">
+</head>
+<body>
+    <header class="space-between">
+        <img src="Images/beplogo.png" alt="Logo" loading="lazy">
+        <button id="myButton">&#9776;</button>
+        <ul>
+            <li class="menu"><a href="index.html">Start</a></li>
+            <li class="menu"><a href="resources.html">Why English ?</a></li>
+            <li class="menu"><a href="about.html">Team</a></li>
+            <li class="menu"><a href="faqs.html">Courses</a></li>
+            <li><b>&copy; ampikalgede <span id="copy"></span></b></li>
+        </ul>
+    </header>
+
+    <main> <br> <br>
+        <h3 class="choice">Please kindly book a special session</h3>
+        <div class="teacher-list">
+            <div class="teacher">
+                <img src="./Images/antoine.jpg" alt="Antoine Mpinga Kalambayi" class="teacher-img">
+                <h3>Antoine Mpinga Kalambayi</h3>
+                <p>Mr. Antoine excels at breaking down complex grammar rules...</p>
+                <button class="book-btn" data-teacher="Antoine Mpinga Kalambayi">Book Now</button>
+            </div>
+            <div class="teacher">
+                <img src="./Images/ankc.jpg" alt="Augustin Nkamba Kabeya" class="teacher-img">
+                <h3>Augustin Nkamba Kabeya</h3>
+                <p>Mr. Augustin inspires a deep love for literature...</p>
+                <button class="book-btn" data-teacher="Augustin Nkamba Kabeya">Book Now</button>
+            </div>
+            <div class="teacher">
+                <img src="./Images/paul.jpg" alt="Paulin Mpoyi Luanga" class="teacher-img">
+                <h3>Paulin Mpoyi Luanga</h3>
+                <p>Mr. Paul focuses on honing both writing and speaking skills...</p>
+                <button class="book-btn" data-teacher="Paulin Mpoyi Luanga">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="bookingModal">
+            <div class="modal-content">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h2>Session with <span id="teacherName"></span></h2>
+
+                <!-- Step 1: Amount Selection and Calendar -->
+                <div id="step1">
+                    <h3>Amount:</h3>
+                    <div class="amount-selection">
+                        <label>
+                            <input type="radio" name="amount" value="50" class="amount-option">
+                            $50
+                        </label>
+                        <label>
+                            <input type="radio" name="amount" value="100" class="amount-option">
+                            $100
+                        </label>
+                        <label>
+                            <input type="radio" name="amount" value="150" class="amount-option">
+                            $150
+                        </label>
+                    </div>
+
+                    <h3>Session Schedule:</h3>
+                    <input type="date" id="bookingDate" class="calendar-input">
+                    
+                    <button id="nextStep1" class="hidden">Next</button>
+                </div>
+
+                <!-- Step 2: Payment Method Selection -->
+                <div id="step2" class="hidden">
+                    <h3>Payment method:</h3>
+                    <div class="payment-method">
+                        <label>
+                            <input type="radio" name="payment" value="orange" class="payment-option">
+                            Orange Money
+                        </label>
+                        <label>
+                            <input type="radio" name="payment" value="mpesa" class="payment-option">
+                            M-Pesa
+                        </label>
+                    </div>
+                    
+                    <div id="paymentInfo"></div>
+                    <button id="nextStep2" class="hidden">Next</button>
+                </div>
+
+                <!-- Step 3: Email Confirmation -->
+                <div id="step3" class="hidden">
+                    <h3>Confirmation</h3>
+                    <div id="paymentInstructions" class="hidden">
+                        <i><p>When your payment is completed, please send your payment proof to be contacted</p></i>
+                        <a href="mailto:ampikalgede@gmail.com" id="email-btn" class="email-btn">Send payment proof</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+
+    <footer class="space-between" id="footer">
+        <div class="content-flex-column">
+            <img id="logoFooter" src="Images/beplogo.png" alt="Logo" loading="lazy">
+            <div id="social" class="content-flex-row-small"></div>
+        </div>
+        
+        <div class="space-even" id="footer-text">
+            <div class="footerText">
+                <ul class="content-flex-column-left">
+                    <li><a href="index.html">Start</a></li>
+                    <li><a href="about.html">Team</a></li>
+                    <li><a href="faqs.html">Courses</a></li>
+                </ul>
+            </div>
+            <div class="footerText">
+                <ul class="content-flex-column-left">
+                    <li>antoinempinga25@gmail.com</li>
+                    <li>+243 843-383-352</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

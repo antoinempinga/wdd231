@@ -35,7 +35,7 @@
     text-decoration: none; /* Removes the underline */
     color: inherit; /* Optional: Matches the text color to its parent */
 }
-btn:hover {
+.btn:hover {
     background: #2980b9;
     text-decoration: none; /* Ensures no underline appears on hover */
 }
